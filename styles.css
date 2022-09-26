@@ -1,57 +1,19 @@
 body{
     margin: 0;
     padding: 0;
+    color: red;
 }
 img {
     width: 100%;
 }
 
-/* typography */
 
-h1 {
-    color: red;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #F8F8F8;
-    margin-bottom: 0;
-}
-
-h2 {
-    color: green;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: #B7B7B7;
-    margin-top: 0;
-}
-
-/* layout */
-.description {
-    /* position: relative;
-    top: 40rem;
-    left: 1.25rem; */
-    margin-right: 1.25rem;
-    width: 100%;
-}
-
-#container {
-    width: 100vw;
-    min-width:470px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media screen and (min-width: 550px){
-    #container{
-        width: 600px;
-    }
-    /* .description {
-        position: relative;
-        top: 45rem;
-        left: 1.25rem;
-    
-    } */
+/* header section */
+#top-banner {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: .67rem 1.125rem;
 }
 
 .profile-chat {
@@ -64,39 +26,53 @@ h2 {
     height: auto;
 }
 
-#top-banner {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: .67rem 1.125rem;
-}
 
-#content{
-    background: url("images/dog-rex.jpg");
-    background-size: cover;
-    min-height: 700px;
-    /* width: 100%; */
-}
-
-#like-dislike {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* image section - content */
 #main-content {
     padding: 0 .625rem;
     background: #F7F8FB;
-    /* height:300px; */
+    /* width: 100vw;
+    display: border-box; */
 }
 
-.profile-img {
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #F8F8F8;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #B7B7B7;
+    margin-top: 0;
+}
+
+
+.description {
+    /* position: relative;
+    top: 40rem;
+    left: 1.25rem; */
+    width: 100%;
+}
+
+
+
+#content{
+    width: 534px;
+    height: 750px;
+    /* background-color: green; */
     border-radius: 15px;
-    z-index: -1;
-    /* width: 100%; */
-
 }
 
+
+
+
+
+/* like-dislike section */
 .reaction {
     background-color: #fff;
     display: flex;
@@ -115,4 +91,10 @@ h2 {
     width: 50%;
     padding: 5px;
 
+}
+
+#like-dislike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
