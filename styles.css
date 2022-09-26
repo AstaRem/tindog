@@ -1,10 +1,17 @@
 body{
     margin: 0;
     padding: 0;
-    color: red;
 }
 img {
     width: 100%;
+}
+
+#container {
+    width: 500px;
+    padding: .67rem 1.125rem;
+    margin-right: auto;
+    margin-left: auto;
+
 }
 
 
@@ -13,7 +20,9 @@ img {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    padding: .67rem 1.125rem;
+    padding-left: 10px;
+    padding-right:10px;
+
 }
 
 .profile-chat {
@@ -28,11 +37,21 @@ img {
 
 
 /* image section - content */
-#main-content {
-    padding: 0 .625rem;
-    background: #F7F8FB;
-    /* width: 100vw;
-    display: border-box; */
+
+
+#content img{
+    width: 550px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 0;
+
+}
+
+#content {
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -53,20 +72,14 @@ h2 {
 
 
 .description {
-    /* position: relative;
+    position: absolute;
     top: 40rem;
-    left: 1.25rem; */
+    left: 18rem;
     width: 100%;
 }
 
 
 
-#content{
-    width: 534px;
-    height: 750px;
-    /* background-color: green; */
-    border-radius: 15px;
-}
 
 
 
@@ -98,3 +111,6 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
+    
+
