@@ -1,8 +1,13 @@
 body{
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 img {
+    width: 100%;
+}
+
+.user-content {
     width: 100%;
 }
 
@@ -72,10 +77,21 @@ h2 {
 
 
 .description {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 35rem;
+    left: 2rem;
+
+}
+
+.subtitle {
     position: absolute;
     top: 40rem;
-    left: 18rem;
-    width: 100%;
+    left: 2rem;
+  
 }
 
 
