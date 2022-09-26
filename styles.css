@@ -84,20 +84,29 @@ h2 {
     position: absolute;
     top: 35rem;
     left: 2rem;
-
 }
 
 .subtitle {
     position: absolute;
     top: 40rem;
     left: 2rem;
-  
 }
 
+.like-img {
+    transform: scale(.5, .5) rotate(-30deg);
+    position: absolute;
+    top: 0rem;
+    left: -6rem;
+    display: none;
+}
 
-
-
-
+.nope-img {
+    transform: scale(.5, .5) rotate(-30deg);
+    position: absolute;
+    top: 0rem;
+    left: -6rem;
+    display: none;
+}
 
 
 
@@ -112,7 +121,7 @@ h2 {
     height: 91px;
     border:none;
     margin: 15px;
-    box-shadow: 0px 0px 25px 3px #e0e0e0; /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 0px 25px 3px #B7B7B7; /* offset-x | offset-y | blur-radius | spread-radius | color */
 
 }
 
@@ -128,5 +137,13 @@ h2 {
     align-items: center;
 }
 
+.like:hover,
+.like:focus {
+    background: #DBFFF4;
+}
+.dislike:hover,
+.dislike:focus {
+    background: #FFE7EF;
+}
     
 
