@@ -6,6 +6,8 @@ img {
     width: 100%;
 }
 
+/* typography */
+
 h1 {
     color: red;
     font-family: 'Poppins', sans-serif;
@@ -24,23 +26,36 @@ h2 {
     margin-top: 0;
 }
 
+/* layout */
 .description {
-    position: absolute;
-    top: 685px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* position: relative;
+    top: 40rem;
+    left: 1.25rem; */
+    margin-right: 1.25rem;
     width: 100%;
 }
 
 #container {
     width: 100vw;
-    height: 100vh;
+    min-width:470px;
     margin-left: auto;
     margin-right: auto;
 }
 
+@media screen and (min-width: 550px){
+    #container{
+        width: 600px;
+    }
+    /* .description {
+        position: relative;
+        top: 45rem;
+        left: 1.25rem;
+    
+    } */
+}
+
 .profile-chat {
-    width: 32.33px;
+    width: 34px;
     height: 34px;
 }
 
@@ -56,8 +71,12 @@ h2 {
     padding: .67rem 1.125rem;
 }
 
-/* #content{
-} */
+#content{
+    background: url("images/dog-rex.jpg");
+    background-size: cover;
+    min-height: 700px;
+    /* width: 100%; */
+}
 
 #like-dislike {
     display: flex;
@@ -73,6 +92,7 @@ h2 {
 
 .profile-img {
     border-radius: 15px;
+    z-index: -1;
     /* width: 100%; */
 
 }
