@@ -92,20 +92,20 @@ h2 {
     left: 2rem;
 }
 
-.like-img {
-    transform: scale(.5, .5) rotate(-30deg);
+#like-img {
+    visibility: hidden;
+    transform: scale(0.25, 0.25) rotate(-30deg);
     position: absolute;
-    top: 0rem;
-    left: -6rem;
-    display: none;
+    top: -1rem;
+    left: -8rem;
 }
 
-.nope-img {
-    transform: scale(.5, .5) rotate(-30deg);
+#nope-img {
+    visibility: hidden;
+    transform: scale(0.25, 0.25) rotate(-30deg);
     position: absolute;
-    top: 0rem;
-    left: -6rem;
-    display: none;
+    top: -1rem;
+    left: -8rem;
 }
 
 
@@ -137,12 +137,12 @@ h2 {
     align-items: center;
 }
 
-.like:hover,
-.like:focus {
+#like:hover,
+#like:focus {
     background: #DBFFF4;
 }
-.dislike:hover,
-.dislike:focus {
+#dislike:hover,
+#dislike:focus {
     background: #FFE7EF;
 }
     
