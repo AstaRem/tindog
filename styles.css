@@ -67,12 +67,17 @@ h1 {
     margin-bottom: 0;
 }
 
-h2 {
+h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
     color: #B7B7B7;
     margin-top: 0;
+}
+
+h3 {
+    width: 70%;
+    margin: 3rem auto;
 }
 
 
@@ -137,13 +142,14 @@ h2 {
     align-items: center;
 }
 
-#like:hover,
-#like:focus {
+#like-btn:hover,
+#like-btn:focus {
     background: #DBFFF4;
 }
-#dislike:hover,
-#dislike:focus {
+#dislike-btn:hover,
+#dislike-btn:focus {
     background: #FFE7EF;
 }
+
     
 

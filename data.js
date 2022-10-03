@@ -4,7 +4,7 @@ export const dogs = [
         avatar: "images/dog-rex.jpg",
         age: 25,
         bio: "Art. Literature. Natural wine. Yoga.",
-        hasBeenSwiped: false,
+        hasBeenSwiped: false, 
         hasBeenLiked: false
     },{
         name: "Bella",
