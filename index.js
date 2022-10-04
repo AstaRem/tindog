@@ -1,86 +1,52 @@
 import { dogs } from "./data.js"
+import { Dog } from "./Dog.js"
 
-let hasBeenSwiped = false;
-let hasBeenLiked = false;
-
-
-
-// displays like/nope image, when button is clicked
-document.getElementById("dislike").addEventListener("click", displayNope)
-function displayNope(){
-    document.getElementById("nope-img").style.visibility = "visible"
-    document.getElementById("like").removeEventListener("click", displayLike)
-    getNewDog()
-}
-
-
-document.getElementById("like").addEventListener("click", displayLike)
-function displayLike(){
-    document.getElementById("like-img").style.visibility = "visible"
-    document.getElementById("dislike").removeEventListener("click", displayNope)
-    getNewDog()
-}
-
-
-//Dog constructor - displays HTML for dog instance
-class Dog {
-    constructor(data){
-        Object.assign(this, data)
-    }
-    getDogHtml() {
-        let {name, avatar, age, bio, hasBeenSwiped, hasBeenLiked} = this
-        return `
-        <img src=${avatar} alt="" class="profile-img">       
-        <h1 class="title">${name}, ${age}</h1>
-        <h2 class="subtitle">${bio}</h2>
-         `
-    }
-}
 
 // create dog instance, assign variable name to it
-let Dog1 = new Dog(dogs[0])
-let Dog2 = new Dog(dogs[1])
-let Dog3 = new Dog(dogs[2])
+ export let newDogInstance
 
-
-
-
-// renders dog instance to the page. do i need to move it into constructor?
-function render(dog){
-    
-    document.getElementById("dog-description").innerHTML = dog.getDogHtml()
- }
- render(Dog1)
-  
-
-function getNewDog(){
-// if(hasBeenSwiped){
-    // hasBeenSwiped = true
+ export function getNewDog(){
     let newDog = dogs.shift()
-    let newDogInstance = new Dog(newDog)
-    render(newDogInstance)
-    return newDog ? new Dog(newDog) : []   
+
+    if(newDog){
+        newDogInstance = new Dog(newDog)
+        render(newDogInstance)
+    } else {
+        getEndHtml()
+    }  
 }
 
-function displayNewDog(){
-    if(hasBeenSwiped){
-        getNewDog()
-    }
+// displays end message
+export function getEndHtml(){
+    let noMoreProfiles = `
+    <h3>There are no more profiles.
+        To start again, refresh the page!
+    </h3>`
+    document.getElementById("main-content").innerHTML = noMoreProfiles
 }
 
-displayNewDog()
+
+// renders dog instance to the page. 
+export function render(dog){
+    document.getElementById("nope-img").style.visibility = "hidden"
+    document.getElementById("like-img").style.visibility = "hidden"
+    document.getElementById("like-btn").disabled = false
+    document.getElementById("dislike-btn").disabled = false
+
+    document.getElementById("dog-description").innerHTML = newDogInstance.getDogHtml()
+ }
+ render(getNewDog())
+
+// renders Like or Nope image and gets new dog profile after delay
+document.getElementById("dislike-btn").addEventListener("click", newDogInstance.displayNopeAndNew)
+document.getElementById("like-btn").addEventListener("click", newDogInstance.displayLikeAndNew)
+
+  
+// takes a new dog object from dog data array, and when there are no more profiles, displays an end message.
 
 
 
-    
- 
 
 
 
 
-//   what is left to do:
-// after the like/dislike buttons are clicked, display another dog. use hasBeenSwiped property. move class Dog declaration to Dog.js
-
- 
-
- 
