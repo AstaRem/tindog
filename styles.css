@@ -142,12 +142,10 @@ h3 {
     align-items: center;
 }
 
-#like-btn:hover,
-#like-btn:focus {
+#like-btn:hover {
     background: #DBFFF4;
 }
-#dislike-btn:hover,
-#dislike-btn:focus {
+#dislike-btn:hover {
     background: #FFE7EF;
 }
 
