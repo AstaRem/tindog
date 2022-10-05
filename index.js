@@ -41,7 +41,6 @@ export function render(dog){
 document.getElementById("dislike-btn").addEventListener("click", newDogInstance.displayNopeAndNew)
 document.getElementById("like-btn").addEventListener("click", newDogInstance.displayLikeAndNew)
 
-  
 
 
 
