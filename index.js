@@ -42,7 +42,6 @@ document.getElementById("dislike-btn").addEventListener("click", newDogInstance.
 document.getElementById("like-btn").addEventListener("click", newDogInstance.displayLikeAndNew)
 
   
-// takes a new dog object from dog data array, and when there are no more profiles, displays an end message.
 
 
 
